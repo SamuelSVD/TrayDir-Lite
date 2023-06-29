@@ -1,5 +1,5 @@
-[![GitHub release](https://img.shields.io/github/release/SamuelSVD/TrayDir.svg)](../../releases/latest)
-[![GitHub release](https://img.shields.io/github/downloads/SamuelSVD/TrayDir/total)](../../releases/latest)
+[![GitHub release](https://img.shields.io/github/release/SamuelSVD/TrayDir-Lite.svg)](../../releases/latest)
+[![GitHub release](https://img.shields.io/github/downloads/SamuelSVD/TrayDir-Lite/total)](../../releases/latest)
 
 # TrayDir-Lite
 A windows application that gives the user the ability to access files, folders, and programs from the system tray.
