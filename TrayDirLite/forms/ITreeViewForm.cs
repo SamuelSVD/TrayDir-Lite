@@ -728,6 +728,7 @@ namespace TrayDir {
 						AddNewPath(file);
 					}
 				}
+				instance.view.Rebuild();
 			} else {
 				if (targetNode != null) {
 					TreeNode draggedNode = (TreeNode)e.Data.GetData(typeof(TreeNode));
