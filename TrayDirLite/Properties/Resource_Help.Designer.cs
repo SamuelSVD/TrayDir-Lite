@@ -63,9 +63,9 @@ namespace TrayDir.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] TrayDir {
+        internal static byte[] TrayDirLite {
             get {
-                object obj = ResourceManager.GetObject("TrayDir", resourceCulture);
+                object obj = ResourceManager.GetObject("TrayDirLite", resourceCulture);
                 return ((byte[])(obj));
             }
         }

@@ -423,7 +423,7 @@ namespace TrayDir {
 		private void helpToolStripMenuItem1_Click(object sender, EventArgs e) {
 			string helpPath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) + "\\traydir.chm";
 			try {
-				using (Stream input = new MemoryStream(Properties.Resource_Help.TrayDir))
+				using (Stream input = new MemoryStream(Properties.Resource_Help.TrayDirLite))
 				using (Stream output = File.Create(helpPath)) {
 					input.CopyTo(output);
 				}

@@ -3,10 +3,10 @@ using System.Windows.Forms;
 
 namespace Utils {
 	internal class HelpUtils {
-		private static string _helpPath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) + "\\traydir.chm";
+		private static string _helpPath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) + "\\traydirlite.chm";
 		private static void MakeHelp() {
 			try {
-				using (Stream input = new MemoryStream(TrayDir.Properties.Resource_Help.TrayDir))
+				using (Stream input = new MemoryStream(TrayDir.Properties.Resource_Help.TrayDirLite))
 				using (Stream output = File.Create(_helpPath)) {
 					input.CopyTo(output);
 				}

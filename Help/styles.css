@@ -1,0 +1,18 @@
+body {
+	font-family: "Calibri", Calibri, serif;
+}
+code {
+	border-radius: 5px;
+	padding: 3px 6px 3px 6px;
+	background-color: #D3D3D3;
+}
+table, td, tr, th {
+	padding: 3px;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.codeblock {
+	border-radius: 5px;
+	padding: 3px 6px 3px 6px;
+	background-color: #D3D3D3;	
+}
