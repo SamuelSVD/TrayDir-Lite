@@ -1,0 +1,13 @@
+__history/
+__recovery/
+Win32/
+*.local
+TrayDirLite/obj
+TrayDirLite/bin
+Installer/bin
+.vs
+*.suo
+Installer/binaries
+TrayDirLite/lib/VisualStudioTabControl/obj/
+*.pfx
+*.exe
