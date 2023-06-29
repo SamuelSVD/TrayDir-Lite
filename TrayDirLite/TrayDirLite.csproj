@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CA5E8206-C9AF-44B6-893B-2B28160D0562}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TrayDirLite</RootNamespace>
+    <RootNamespace>TrayDir</RootNamespace>
     <AssemblyName>TrayDirLite</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -23,7 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
@@ -31,6 +31,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release(x64)|AnyCPU'">
+    <OutputPath>bin\Release(x64)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>file-exe.ico</ApplicationIcon>
@@ -156,6 +162,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Strings.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.fr.resx</DependentUpon>
+    </Compile>
     <Compile Include="utils\AppUtils.cs" />
     <Compile Include="utils\ControlUtils.cs" />
     <Compile Include="utils\DialogUtils.cs" />
@@ -260,6 +271,10 @@
     <EmbeddedResource Include="Properties\Resource_Help.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource_Help.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Strings.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <SubType>Designer</SubType>
