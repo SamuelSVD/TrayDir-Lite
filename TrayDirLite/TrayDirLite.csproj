@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA5E8206-C9AF-44B6-893B-2B28160D0562}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TrayDirLite</RootNamespace>
+    <AssemblyName>TrayDirLite</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>file-exe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controls\NativeContextMenuStrip.cs" />
+    <Compile Include="controls\SmartTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="controls\ValidateTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\ValidateTextBox.Designer.cs">
+      <DependentUpon>ValidateTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\InstanceManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\InstanceManagerForm.Designer.cs">
+      <DependentUpon>InstanceManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\IOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\IOptionsForm.Designer.cs">
+      <DependentUpon>IOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\IPathForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\IPathForm.Designer.cs">
+      <DependentUpon>IPathForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ITreeViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ITreeViewForm.Designer.cs">
+      <DependentUpon>ITreeViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\IVirtualFolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\IVirtualFolderForm.Designer.cs">
+      <DependentUpon>IVirtualFolderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\IWebLinkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\IWebLinkForm.Designer.cs">
+      <DependentUpon>IWebLinkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\UnhandledExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UnhandledExceptionForm.Designer.cs">
+      <DependentUpon>UnhandledExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\FolderSelectDialog\FolderSelectDialog.cs" />
+    <Compile Include="lib\FolderSelectDialog\Reflector.cs" />
+    <Compile Include="lib\VerticalSeparator\VerticalSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="lib\VisualStudioTabControl\obj\Debug\.NETFramework,Version=v4.0.AssemblyAttributes.cs" />
+    <Compile Include="models\Model.cs" />
+    <Compile Include="models\Settings.cs" />
+    <Compile Include="models\SettingsApplication.cs" />
+    <Compile Include="models\SettingsWindows.cs" />
+    <Compile Include="models\StringIndexable.cs" />
+    <Compile Include="models\TrayInstance.cs" />
+    <Compile Include="models\TrayInstanceItem.cs" />
+    <Compile Include="models\TrayInstanceNode.cs" />
+    <Compile Include="models\TrayInstancePath.cs" />
+    <Compile Include="models\TrayInstanceSettings.cs" />
+    <Compile Include="models\TrayInstanceVirtualFolder.cs" />
+    <Compile Include="models\TrayInstanceWebLink.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resource_Help.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource_Help.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="utils\AppUtils.cs" />
+    <Compile Include="utils\ControlUtils.cs" />
+    <Compile Include="utils\DialogUtils.cs" />
+    <Compile Include="utils\FileImageUtils.cs" />
+    <Compile Include="utils\HelpUtils.cs" />
+    <Compile Include="utils\IconUtils.cs" />
+    <Compile Include="utils\IMenuItemIconUtils.cs" />
+    <Compile Include="utils\TrayUtils.cs" />
+    <Compile Include="utils\UpdateUtils.cs" />
+    <Compile Include="utils\XMLUtils.cs" />
+    <Compile Include="views\CheckBoxOptionView.cs" />
+    <Compile Include="views\ComboBoxView.cs" />
+    <Compile Include="views\IItem.cs" />
+    <Compile Include="views\IMenuItem\IMenuItem.cs" />
+    <Compile Include="views\IMenuItem\IMenuItem.Events.cs" />
+    <Compile Include="views\IMenuItem\IPathMenuItem.cs" />
+    <Compile Include="views\IMenuItem\IVirtualFolderMenuItem.cs" />
+    <Compile Include="views\IMenuItem\IWebLinkMenuItem.cs" />
+    <Compile Include="views\InstanceNode.cs" />
+    <Compile Include="views\ITray.cs" />
+    <Compile Include="views\ITreeNode\ITreeNode.cs" />
+    <Compile Include="views\ITreeNode\ITreePathNode.cs" />
+    <Compile Include="views\ITreeNode\ITreeSeparatorNode.cs" />
+    <Compile Include="views\ITreeNode\ITreeUnknownNode.cs" />
+    <Compile Include="views\ITreeNode\ITreeVirtualFolderNode.cs" />
+    <Compile Include="views\ITreeNode\ITreeWebLinkNode.cs" />
+    <Compile Include="views\IView.cs" />
+    <EmbeddedResource Include="controls\ValidateTextBox.resx">
+      <DependentUpon>ValidateTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\AboutForm.fr.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\InstanceManagerForm.fr.resx">
+      <DependentUpon>InstanceManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\InstanceManagerForm.resx">
+      <DependentUpon>InstanceManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\IOptionsForm.fr.resx">
+      <DependentUpon>IOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\IOptionsForm.resx">
+      <DependentUpon>IOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\IPathForm.fr.resx">
+      <DependentUpon>IPathForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\IPathForm.resx">
+      <DependentUpon>IPathForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ITreeViewForm.fr.resx">
+      <DependentUpon>ITreeViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ITreeViewForm.resx">
+      <DependentUpon>ITreeViewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\IVirtualFolderForm.fr.resx">
+      <DependentUpon>IVirtualFolderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\IVirtualFolderForm.resx">
+      <DependentUpon>IVirtualFolderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\IWebLinkForm.fr.resx">
+      <DependentUpon>IWebLinkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\IWebLinkForm.resx">
+      <DependentUpon>IWebLinkForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\MainForm.fr.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\SettingsForm.fr.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\UnhandledExceptionForm.fr.resx">
+      <DependentUpon>UnhandledExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\UnhandledExceptionForm.resx">
+      <DependentUpon>UnhandledExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource_Help.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource_Help.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Strings.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="lib\VisualStudioTabControl\.vs\VisualStudioTabControl\v16\.suo" />
+    <None Include="lib\VisualStudioTabControl\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="lib\VisualStudioTabControl\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="lib\VisualStudioTabControl\obj\Debug\VisualStudioTabControl.csproj.CoreCompileInputs.cache" />
+    <None Include="lib\VisualStudioTabControl\obj\Debug\VisualStudioTabControl.csproj.GenerateResource.cache" />
+    <None Include="lib\VisualStudioTabControl\obj\Debug\VisualStudioTabControl.csprojAssemblyReference.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="file-exe.ico" />
+    <Content Include="lib\VisualStudioTabControl\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="lib\VisualStudioTabControl\obj\Debug\VisualStudioTabControl.csproj.FileListAbsolute.txt" />
+    <Content Include="lib\VisualStudioTabControl\obj\Debug\VisualStudioTabControl.dll" />
+    <Content Include="lib\VisualStudioTabControl\obj\Debug\VisualStudioTabControl.pdb" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\file-exe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\VisualStudioTabControl\bin\Debug\" />
+    <Folder Include="lib\VisualStudioTabControl\bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
