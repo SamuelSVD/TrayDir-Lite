@@ -53,6 +53,10 @@
 		<param name="Local" value="src/vfolders.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Web Links">
+		<param name="Local" value="src/weblinks.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Shortcuts">
 		<param name="Local" value="src/shortcuts.htm">
 		</OBJECT>
